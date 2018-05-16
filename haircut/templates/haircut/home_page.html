@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Amazing Robin's Barbershop</title>
+</head>
+<body>
+    <h1>Amazing Robin's Barbershop</h1>
+    <p>robin is a terrible guy</p>
+
+
+    <!-- Item 1 -->
+    <p>Robin:loves babies</p>
+    <img src=https://tse4-mm.cn.bing.net/th?id=OIP.etfMpY8HPmccPAyDYK69xAHaE7&pid=Api>
+ 
+    <!-- Item 2 -->
+    <img src="http://www.northernthreads.co.uk/blog/wp-content/uploads/2013/08/barber.jpg">
+    
+    <!-- Item 3 --> 
+    <img src=https://tse3.mm.bing.net/th?id=OIP.XhsPc5RhAbE7ueFCOTokaQHaE8&pid=Api>
+
+    <!-- User Form -->
+    <h1>Place Your Order</h1>
+    <form action="{% url 'haircut:home_page' %} " method="POST">
+        {% csrf_token %}
+        <input type="text" name="time" placeholder="Type Your time"><br>
+        <textarea placeholder="Text your customer name" name="customer name"></textarea><br>
+        <input type="submit" value="Buy Now!">
+    </form>
+    <h1>Your Order</h1>
+    <p>time: {{time}}</p>
+    <p>customer_name: {{customer_name}}</p>
+</body>
+</html>
